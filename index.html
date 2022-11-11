@@ -3,10 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet/less" type="text/css" href="./index.less" />
+    <link rel="stylesheet/css" type="text/css" href="./bulma.min.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build Forger TibiaME</title>
   </head>
   <body>
-    Build in Build...
+    <div class="container">
+      <h1>Build Forger TibiaME</h1>
+      <form id="form">
+        <input
+          class="input"
+          name="lvl"
+          type="number"
+          placeholder="Account level"
+        />
+        <input
+          class="input"
+          name="hp"
+          type="number"
+          placeholder="Health Points"
+        />
+        <input
+          class="input"
+          name="mp"
+          type="number"
+          placeholder="Mana Points"
+        />
+        <input
+          class="input"
+          name="atk"
+          type="number"
+          placeholder="Attack Points"
+        />
+        <input
+          class="input"
+          name="def"
+          type="number"
+          placeholder="Deffence Points"
+        />
+
+        <div class="select is-large">
+          <select id="selectClass" name="class">
+            <option>warrior</option>
+            <option>wizard</option>
+          </select>
+        </div>
+
+        <div class="container-sub">
+          <label class="checkbox">
+            <input type="checkbox" name="isFull" />
+            Full Attributes
+          </label>
+        </div>
+
+        <div class="container-sub" id="skillsCheckbox"></div>
+        <button type="submit" class="button is-success is-large">Build</button>
+      </form>
+    </div>
   </body>
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
 </html>
